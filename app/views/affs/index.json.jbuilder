@@ -1,0 +1,1 @@
+json.array! @affs, partial: 'affs/aff', as: :aff

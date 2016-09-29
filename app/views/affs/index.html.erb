@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Affs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @affs.each do |aff| %>
+      <tr>
+        <td><%= aff.name %></td>
+        <td><%= link_to 'Show', aff %></td>
+        <td><%= link_to 'Edit', edit_aff_path(aff) %></td>
+        <td><%= link_to 'Destroy', aff, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Aff', new_aff_path %>
